@@ -16,3 +16,7 @@ def count(request):
 	        sort_text[word]+= 1 
 	sort_dict=sorted(sort_text.items(),key=lambda w: w[1], reverse=True)
 	return render(request, 'count.html',{'count': text,'sort': sort_dict})
+
+
+def about(request):
+    return render(request, 'about.html')
